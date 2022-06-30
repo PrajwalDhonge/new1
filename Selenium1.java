@@ -11,8 +11,11 @@ public class Selenium1 {
 		System.setProperty("webdriver.chrome.driver", "./drivers/chromedriver.exe");
         WebDriver driver=new ChromeDriver();
         driver.get("https://www.google.com/");
-       
+        System.out.println(driver.getTitle());
+        driver.manage().window().fullscreen();
         driver.findElement(By.xpath("//input[@class='gLFyf gsfi']")).sendKeys("Gmail");
+        driver.findElement(By.xpath("//input[@class='gNO89b']")).click();
+
 	}
 
 }
